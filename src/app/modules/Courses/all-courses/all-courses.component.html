@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="course-list">
+      <mat-list>
+        <mat-list-item routerLink="/details" *ngFor="let cour of courses" (click)="selecteCourse(cour)">
+          {{ cour.name }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="course-details">
+    
+    </div>
+  </div>
+
+  
