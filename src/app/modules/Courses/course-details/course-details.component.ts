@@ -40,8 +40,7 @@ export class CourseDetailsComponent {
   onClick(){
     const jsonString = JSON.stringify(this._myCourse.id);
     localStorage.setItem('courseID', jsonString);
+    
     this.router.navigate(['/edit']);
   }
-  
-
 }

@@ -6,8 +6,8 @@ import { CourseDetailsComponent } from "./course-details/course-details.componen
 import { CoursesRoutingModule } from "./courses-routing.module";
 import { EditCourseComponent } from "./edit-course/edit-course.component";
 import { MatListModule } from '@angular/material/list';
-import { NgFor, NgIf } from "@angular/common";
-import { FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { DatePipe, NgFor, NgIf } from "@angular/common";
+import { FormGroup, FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule } from "@angular/forms";
 import { CategoryService } from "src/app/services/category.service";
 import { MatCardModule } from "@angular/material/card";
 
@@ -21,9 +21,9 @@ import { MatCardModule } from "@angular/material/card";
         EditCourseComponent, ],
     imports:[ CoursesRoutingModule,
         MatListModule,NgFor,NgIf, FormsModule, ReactiveFormsModule, MatCardModule,
-        
+        DatePipe
     ],
-        providers: [CourseService, CategoryService],
+        providers: [CourseService, CategoryService,DatePipe],
         bootstrap:[],  
         exports: [AllCoursesComponent,
             AddCourseComponent,

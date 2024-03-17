@@ -21,7 +21,6 @@ export class CourseService {
 
   // יצירת קורס חדש
   createCourse(course: Course): Observable<Course> {
-    debugger
     return this._http.post<Course>(this.apiUrl, course);
   }
 
